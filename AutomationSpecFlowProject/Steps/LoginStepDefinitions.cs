@@ -18,19 +18,19 @@ namespace AutomationSpecFlowProject.Steps
         {
             _scenarioContext = scenarioContext;
         }
-        [Given(@"I Navigate to application")]
+        [Given(@"User Navigate to application")]
         public void GivenIOpenTheWebsite()
         {
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php"); ;
         }
 
-        [Given(@"I click on sign In button")]
+        [Given(@"clicking on sign In button")]
         public void GivenIClickOnSignInButton()
         {
             wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("login"))).Click();
         }
 
-        [Given(@"Enter my logindetails as following :")]
+        [Given(@"Enter user logindetails as following :")]
         public void GivenEnterMyLogindetailsAsFollowing(Table table)
         {
             dynamic data = table.CreateDynamicInstance();
