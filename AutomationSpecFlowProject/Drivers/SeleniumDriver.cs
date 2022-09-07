@@ -7,8 +7,12 @@ namespace AutomationSpecFlowProject.Drivers
 {
     public class SeleniumDriver
     {
-        protected IWebDriver? Driver;
-        protected WebDriverWait? Wait;
+#pragma warning disable CS8618 
+        protected IWebDriver Driver;
+#pragma warning restore CS8618
+#pragma warning disable CS8618
+        protected WebDriverWait Wait;
+#pragma warning restore CS8618
 
         public void OneTimeSetup()
         {
