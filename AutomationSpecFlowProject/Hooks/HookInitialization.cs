@@ -4,20 +4,19 @@ using TechTalk.SpecFlow;
 namespace AutomationSpecFlowProject.Hooks
 {
     [Binding]
-    public class HookInitialization  : SeleniumDriver
+    public class HookInitialization : SeleniumDriver
     {
-        
-        
+
         [BeforeScenario]
         public void BeforeScenario()
         {
-            OneTimeSetup();         
+            OneTimeSetup();
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-            driver.Quit();
+            Driver.Quit();
         }
     }
 }

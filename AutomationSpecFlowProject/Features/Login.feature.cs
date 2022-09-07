@@ -74,12 +74,14 @@ namespace AutomationSpecFlowProject.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Loging into the application")]
-        public virtual void LogingIntoTheApplication()
+        [NUnit.Framework.DescriptionAttribute("Loging successfully into the application")]
+        [NUnit.Framework.CategoryAttribute("EndtoEnd")]
+        public virtual void LogingSuccessfullyIntoTheApplication()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "EndtoEnd"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Loging into the application", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Loging successfully into the application", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -101,10 +103,10 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("I Navigate to application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User Navigate to application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
- testRunner.And("I click on sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("clicking on sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserName",
@@ -113,7 +115,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "test_09@test.com",
                             "Test.99"});
 #line 9
- testRunner.And("Enter my logindetails as following :", ((string)(null)), table1, "And ");
+ testRunner.And("Enter user logindetails as following :", ((string)(null)), table1, "And ");
 #line hidden
 #line 12
  testRunner.When("Click on Sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -127,9 +129,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Loging into the application with invalid email")]
+        [NUnit.Framework.CategoryAttribute("EndtoEnd")]
         public virtual void LogingIntoTheApplicationWithInvalidEmail()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "EndtoEnd"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Loging into the application with invalid email", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 16
@@ -153,10 +157,10 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 17
- testRunner.Given("I Navigate to application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User Navigate to application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 18
- testRunner.And("I click on sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("clicking on sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserName",
@@ -165,7 +169,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "test.test.com",
                             "Test"});
 #line 19
- testRunner.And("Enter my logindetails as following :", ((string)(null)), table2, "And ");
+ testRunner.And("Enter user logindetails as following :", ((string)(null)), table2, "And ");
 #line hidden
 #line 22
  testRunner.When("Click on Sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -183,9 +187,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Loging into the application with invalid password")]
+        [NUnit.Framework.CategoryAttribute("EndtoEnd")]
         public virtual void LogingIntoTheApplicationWithInvalidPassword()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "EndtoEnd"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Loging into the application with invalid password", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 27
@@ -209,10 +215,10 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 28
- testRunner.Given("I Navigate to application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User Navigate to application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 29
- testRunner.And("I click on sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("clicking on sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserName",
@@ -221,7 +227,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "test_09@test.com",
                             "Test"});
 #line 30
- testRunner.And("Enter my logindetails as following :", ((string)(null)), table4, "And ");
+ testRunner.And("Enter user logindetails as following :", ((string)(null)), table4, "And ");
 #line hidden
 #line 33
  testRunner.When("Click on Sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -239,9 +245,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Loging into the application with empty email and password")]
+        [NUnit.Framework.CategoryAttribute("EndtoEnd")]
         public virtual void LogingIntoTheApplicationWithEmptyEmailAndPassword()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "EndtoEnd"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Loging into the application with empty email and password", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 38
@@ -265,10 +273,10 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 39
- testRunner.Given("I Navigate to application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User Navigate to application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 40
- testRunner.And("I click on sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("clicking on sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserName",
@@ -277,7 +285,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "",
                             ""});
 #line 41
- testRunner.And("Enter my logindetails as following :", ((string)(null)), table6, "And ");
+ testRunner.And("Enter user logindetails as following :", ((string)(null)), table6, "And ");
 #line hidden
 #line 44
  testRunner.When("Click on Sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

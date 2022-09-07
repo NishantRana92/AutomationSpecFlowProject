@@ -21,13 +21,15 @@ namespace AutomationSpecFlowProject.Steps
         [Given(@"User Navigate to application")]
         public void GivenIOpenTheWebsite()
         {
-            driver.Navigate().GoToUrl("http://automationpractice.com/index.php"); ;
+            Driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
+            var url = Driver.Url;
+            Assert.AreEqual(url, "http://automationpractice.com/index.php");
         }
 
         [Given(@"clicking on sign In button")]
         public void GivenIClickOnSignInButton()
         {
-            wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("login"))).Click();
+            Wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("login"))).Click();
         }
 
         [Given(@"Enter user logindetails as following :")]
@@ -35,20 +37,20 @@ namespace AutomationSpecFlowProject.Steps
         {
             dynamic data = table.CreateDynamicInstance();
 
-            wait.Until(ExpectedConditions.ElementIsVisible(By.Id("email"))).SendKeys((string)data.UserName);
-            wait.Until(ExpectedConditions.ElementIsVisible(By.Id("passwd"))).SendKeys((string)data.Password);
+            Wait.Until(ExpectedConditions.ElementIsVisible(By.Id("email"))).SendKeys((string)data.UserName);
+            Wait.Until(ExpectedConditions.ElementIsVisible(By.Id("passwd"))).SendKeys((string)data.Password);
         }
 
         [When(@"Click on Sign in button")]
         public void WhenClickOnSignInButton()
         {
-            wait.Until(ExpectedConditions.ElementIsVisible(By.Id("SubmitLogin"))).Click();
+            Wait.Until(ExpectedConditions.ElementIsVisible(By.Id("SubmitLogin"))).Click();
         }
 
         [Then(@"Verify The Welcome message")]
         public void ThenVerifyTheWelcomeMessage()
         {
-            var welcome_msg = wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("info-account"))).Text;
+            var welcome_msg = Wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("info-account"))).Text;
             Assert.AreEqual(welcome_msg, "Welcome to your account. Here you can manage all of your personal information and orders.");
         }
 
@@ -56,11 +58,9 @@ namespace AutomationSpecFlowProject.Steps
         public void ThenVerifyTheErrorMessage(Table table)
         {
             dynamic data = table.CreateDynamicInstance();
-            var errorMessage = wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("alert"))).Text;
+            var errorMessage = Wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("alert"))).Text;
             Console.WriteLine(errorMessage);
             Assert.AreEqual((string)data.message, errorMessage.Replace("\r\n", " "));
         }
-
-
     }
 }

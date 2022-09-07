@@ -7,19 +7,18 @@ namespace AutomationSpecFlowProject.Drivers
 {
     public class SeleniumDriver
     {
-        protected IWebDriver driver;
-        protected WebDriverWait wait;
+        protected IWebDriver? Driver;
+        protected WebDriverWait? Wait;
 
         public void OneTimeSetup()
         {
             
-            ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.AddArgument("--incognito");
+            var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("--start-maximized");
             chromeOptions.AddArguments("--headless");
             chromeOptions.AddArguments("--disable-extensions");
-            driver = new ChromeDriver(chromeOptions);
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            Driver = new ChromeDriver(chromeOptions);
+            Wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(30));
         }
 
     }
